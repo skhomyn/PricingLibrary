@@ -2,7 +2,7 @@
   "name": "pricing",
   "version": "1.0.0",
   "description": "",
-  "main": "run.js",
+  "main": "main.js",
   "scripts": {
     "test": "mocha ./tests.js"
   },

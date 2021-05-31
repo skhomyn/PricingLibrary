@@ -20,7 +20,7 @@ const calculateDiscountedTotal = (draftTotal) => {
     else if (draftTotal >= 10000) 
         discountRate = 0.10;
     
-    let discountedTotal = draftTotal * (1 - discountRate);  
+    const discountedTotal = draftTotal * (1 - discountRate);  
 
     return Promise.resolve(discountedTotal);
 }
@@ -65,12 +65,12 @@ const calculateTax = (provStateCode) => {
 const calculateTotal = async (numberItems, costPerItem, provStateCode) => {
     if (!numberItems || !costPerItem || !provStateCode)
         return Promise.reject('Invalid input'); 
-    let draftTotal = numberItems * costPerItem;
+    const draftTotal = numberItems * costPerItem;
     
     try {
-        let discountedTotal = await calculateDiscountedTotal(draftTotal)
-        let tax = discountedTotal * await calculateTax(provStateCode)
-        let finalTotal = (discountedTotal + tax).toFixed(2); 
+        const discountedTotal = await calculateDiscountedTotal(draftTotal)
+        const tax = discountedTotal * await calculateTax(provStateCode)
+        const finalTotal = (discountedTotal + tax).toFixed(2); 
 
         return finalTotal;
     } catch(e) {
