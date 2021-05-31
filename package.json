@@ -1,0 +1,17 @@
+{
+  "name": "pricing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.js",
+  "scripts": {
+    "test": "mocha ./tests.js"
+  },
+  "author": "stepan",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^8.4.0",
+    "node": "^16.1.0"
+  }
+}
